@@ -3,8 +3,15 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#e30000">
+    <meta name="description"
+          content="Catálogo de helados Fruna Osorno">
+
     <title>Helados | Fruna Osorno</title>
+
     <style>
         * {
             margin: 0;
@@ -13,22 +20,122 @@
         }
 
         body {
-            background: #001d54;
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f3f4f6;
+            color: #222;
+            min-height: 100dvh;
         }
 
-        img {
-            display: block;
+        header {
+            background: linear-gradient(
+                135deg, #ff1717, #b80000
+            );
+            color: white;
+            text-align: center;
+            padding: 22px 15px;
+            box-shadow: 0 3px 15px #0002;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 900;
+            font-style: italic;
+        }
+
+        header p {
+            font-size: 13px;
+            margin-top: 6px;
+            opacity: .95;
+        }
+
+        main {
             width: 100%;
             max-width: 850px;
+            margin: auto;
+        }
+
+        .instruction {
+            padding: 14px 10px;
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .poster {
+            display: block;
+            width: 100%;
             height: auto;
-            align-self: flex-start;
+        }
+
+        .actions {
+            padding: 16px;
+        }
+
+        .button {
+            display: block;
+            background: #e30000;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 16px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px #e3000030;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 15px 24px;
+            font-size: 12px;
+            color: #777;
+        }
+
+        @media (min-width: 768px) {
+            main {
+                padding: 20px;
+            }
+
+            .poster {
+                border-radius: 16px;
+                box-shadow: 0 8px 30px #0002;
+            }
         }
     </style>
 </head>
+
 <body>
-    <img src="helados.png" alt="Cartel de helados Fruna Osorno">
+
+    <header>
+        <h1>Fruna Osorno</h1>
+        <p>Catálogo digital de helados</p>
+    </header>
+
+    <main>
+
+        <div class="instruction">
+            🔍 Amplía la imagen para ver los precios
+        </div>
+
+        <a href="helados.png">
+            <img
+                class="poster"
+                src="helados.png"
+                alt="Cartel de helados Fruna Osorno"
+                fetchpriority="high"
+            >
+        </a>
+
+        <div class="actions">
+            <a class="button" href="helados.png">
+                🔍 Ampliar cartel
+            </a>
+        </div>
+
+        <footer>
+            Fruna Osorno · Catálogo de helados
+        </footer>
+
+    </main>
+
 </body>
 </html>
